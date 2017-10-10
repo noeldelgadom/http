@@ -11,7 +11,10 @@ export class ServerService {
     });
     return this.http.post('https://udemy-ng-http-d7ad9.firebaseio.com/data.json',
     servers,
-    { headers: headers }
-  );
+    { headers: headers });
+  }
+
+  getServers() {
+    return this.http.get('https://udemy-ng-http-d7ad9.firebaseio.com/data.json');
   }
 }
