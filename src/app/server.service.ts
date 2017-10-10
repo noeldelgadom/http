@@ -31,4 +31,13 @@ export class ServerService {
         }
       );
   }
+
+  getAppName() {
+    return this.http.get('https://udemy-ng-http-d7ad9.firebaseio.com/appName.json')
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
 }
